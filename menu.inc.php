@@ -25,17 +25,22 @@
       </ul>
 
       <!-- Partie droite -->
-       <?php if(!isset($_SESSION['role'])):
-       ?>
       <ul class="navbar-nav">
+               <?php if(!isset($_SESSION['role'])):
+       ?>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="inscription.php">Inscription</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="connexion.php">Connexion</a>
           </li>
-      </ul>
+                <?php else: ?>
+                   <li class="nav-item">
+            <a class="nav-link" href="deconnexion.php">Déconnexion</a>
+          </li> 
+
       <?php endif;?>
+      </ul>
     </div>
   </div>
 </nav>
