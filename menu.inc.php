@@ -12,15 +12,21 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
         </li>
+       <?php if(isset($_SESSION['role'])):
+        if (($_SESSION['role'])==1):?>
         <li class="nav-item">
-          <a class="nav-link" href="page.php">Page</a>
+          <a class="nav-link" href="prop-sujet.php">Proposition d'un sujet</a>
         </li>
+        <?php endif;
+        endif;?>
         <li class="nav-item">
           <a class="nav-link" href="autre.php">Autre page</a>
         </li>
       </ul>
 
       <!-- Partie droite -->
+       <?php if(!isset($_SESSION['role'])):
+       ?>
       <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="inscription.php">Inscription</a>
@@ -29,6 +35,7 @@
             <a class="nav-link" href="connexion.php">Connexion</a>
           </li>
       </ul>
+      <?php endif;?>
     </div>
   </div>
 </nav>

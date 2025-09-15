@@ -1,8 +1,11 @@
 <?php
+if(isset($_SESSION['role'])):
+  header("Location: index.php");
+else:
   $titre = "Connexion";
-
   include('header.inc.php');
   include('menu.inc.php');
+
 ?>
 
   <h1>Connexion à votre compte</h1>
@@ -25,4 +28,6 @@
   </form>
 <?php
   include('footer.inc.php');
+
+endif;
 ?>

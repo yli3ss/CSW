@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(isset($_SESSION['role'])):
+  header("Location: index.php");
+else:
   $titre = "Inscription";
 
   include('header.inc.php');
@@ -40,4 +44,6 @@
  
 <?php
   include('footer.inc.php');
+
+endif;
 ?>
