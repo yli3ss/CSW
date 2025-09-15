@@ -5,7 +5,10 @@
   include('menu.inc.php');
   include('message.inc.php')
 ?>
-  <h1>Bienvenue sur une page</h1>
+  <h1>Proposition d'un sujet PING</h1>
+
+
+
 <?php
   include('footer.inc.php');
 ?>

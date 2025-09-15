@@ -12,7 +12,7 @@ include('message.inc.php');
             <p class="lead">Plateforme de gestion des projets ingénieur de l'ESIGELEC</p>
             <hr class="my-4">
             <p>Créez, consultez et gérez les sujets de projets pour les élèves de dernière année.</p>
-            <?php if (!isset($_SESSION['email'])): ?>
+            <?php if (!isset($_SESSION['role'])): ?>
                 <a class="btn btn-primary btn-lg me-2" href="inscription.php" role="button">Créer un compte</a>
                 <a class="btn btn-outline-primary btn-lg" href="connexion.php" role="button">Se connecter</a>
             <?php endif; ?>

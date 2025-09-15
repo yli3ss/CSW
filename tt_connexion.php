@@ -28,13 +28,15 @@
             $pass_bdd = $tuple['password'];
             if(password_verify($password,$pass_bdd)){
                 $_SESSION['message'] = "Connexion réussi";
+                $_SESSION['role'] = $tuple['role'];
+
             } else {
                 $_SESSION['erreur'] = "Identifiants incorrects";
             }
         }
     }
   }
-// header('Location: index.php');
+ header('Location: index.php');
 
 
 ?>
