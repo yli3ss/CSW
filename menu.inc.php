@@ -17,11 +17,10 @@
         <li class="nav-item">
           <a class="nav-link" href="prop-sujet.php">Proposition d'un sujet</a>
         </li>
+        
         <?php endif;
         endif;?>
-        <li class="nav-item">
-          <a class="nav-link" href="autre.php">Autre page</a>
-        </li>
+        
       </ul>
 
       <!-- Partie droite -->
