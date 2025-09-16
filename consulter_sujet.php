@@ -1,14 +1,14 @@
 <?php
   session_start();
-  if (!($_SESSION['role'])==0):
+  if (!($_SESSION['role'])==2):
     header("Location: index.php");
   else:
 
-  $titre = "Consultaion des sujets du PING";
+  $titre = "Consultation des sujets du PING";
   include('header.inc.php');
   include('menu.inc.php');
 ?>
-  <h1>Consultaion des sujets du PING</h1>
+  <h1>Consultation des sujets du PING</h1>
 
 
 
