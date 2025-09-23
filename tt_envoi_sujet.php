@@ -56,7 +56,7 @@
     }
 
     $stmt = $mysqli->prepare(
-        "INSERT INTO `sujets` (nom, id_createur, resume, deux_equipes, confidentiel) VALUES (?, ?, ?, ?)"
+        "INSERT INTO `sujets` (nom, id_createur, resume, deux_equipes, confidentiel) VALUES (?, ?, ?, ?, ?)"
     );
     if (!$stmt) {
         $_SESSION["erreur"] = "Erreur préparation requête.";
