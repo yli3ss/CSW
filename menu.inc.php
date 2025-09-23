@@ -12,17 +12,16 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
         </li>
-       <?php if(isset($_SESSION['role'])):
-        if (($_SESSION['role'])==1):?>
-        <li class="nav-item">
-          <a class="nav-link" href="sujets.php">Gestion des sujets</a>
-        </li>
-        <?php endif;
-        endif;?>
-        <li class="nav-item">
-          <a class="nav-link" href="autre.php">Autre page</a>
-        </li>
-      </ul>
+       <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
+    <li class="nav-item">
+        <a class="nav-link" href="prop-sujet.php">Proposition d'un sujet</a>
+    </li>
+       <?php elseif (isset($_SESSION['role']) && $_SESSION['role'] == 2): ?>
+    <li class="nav-item">
+        <a class="nav-link" href="consulter_sujet.php">Consultation des sujets</a>
+    </li>
+<?php endif; ?>
+</ul>
 
       <!-- Partie droite -->
       <ul class="navbar-nav">
