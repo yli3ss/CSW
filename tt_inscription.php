@@ -1,19 +1,11 @@
 <?php
   session_start(); // Pour les massages
 
-  // Contenu du formulaire :
   $nom =  htmlentities($_POST['nom']);
   $prenom = htmlentities($_POST['prenom']);
   $email =  htmlentities($_POST['email']);
   $password = htmlentities($_POST['password']);
   $role = 0; 
-  // Définir des valeurs pour le role :
-  // 0 : le compte n'est pas activé,
-  // 1 : tuteur entreprise,
-  // 2 : Responsable Ping,
-  // 3 : admin
-
-  // Option pour bcrypt (voir le lien du cours vers le site de PHP) :
   $options = [
         'cost' => 10,
   ];
@@ -25,8 +17,8 @@
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
   if ($mysqli->connect_error) {
     $_SESSION['erreur']="Problème de connexion à la base de données ! &#128557;";
-      die('Erreur de connexion (' . $mysqli->connect_errno . ') '
-              . $mysqli->connect_error);
+      //die('Erreur de connexion (' . $mysqli->connect_errno . ') '
+        //      . $mysqli->connect_error);
   }
 
   // À faire : vérifier si l'email existe déjà !
