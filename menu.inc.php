@@ -15,7 +15,7 @@
        <?php if(isset($_SESSION['role'])):
         if (($_SESSION['role'])==1):?>
         <li class="nav-item">
-          <a class="nav-link" href="prop-sujet.php">Proposition d'un sujet</a>
+          <a class="nav-link" href="sujets.php">Gestion des sujets</a>
         </li>
         <?php endif;
         endif;?>
