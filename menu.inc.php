@@ -14,7 +14,7 @@
         </li>
        <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
     <li class="nav-item">
-        <a class="nav-link" href="prop-sujet.php">Proposition d'un sujet</a>
+        <a class="nav-link" href="sujets_propose.php">Proposition d'un sujet</a>
     </li>
        <?php elseif (isset($_SESSION['role']) && $_SESSION['role'] == 2): ?>
     <li class="nav-item">
