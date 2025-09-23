@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Accès réservé au rôle 1 (tuteur)
 if (!isset($_SESSION['role']) || (int)$_SESSION['role'] !== 1) {
     header("Location: index.php");
@@ -10,6 +9,7 @@ if (!isset($_SESSION['role']) || (int)$_SESSION['role'] !== 1) {
 $titre = "Proposition d'un sujet PING";
 include('header.inc.php');
 include('menu.inc.php');
+include('message.inc.php');
 ?>
 
 <div class="container my-4">

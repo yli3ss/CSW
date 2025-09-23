@@ -10,6 +10,7 @@ if (!isset($_SESSION['role']) || (int)$_SESSION['role'] !== 1) {
 $titre = "Proposition d'un sujet PING";
 include('header.inc.php');
 include('menu.inc.php');
+include('message.inc.php');
 ?>
 
 <div class="container my-4">

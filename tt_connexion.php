@@ -28,7 +28,8 @@
             $pass_bdd = $tuple['password'];
             if(password_verify($password,$pass_bdd)){
                 $_SESSION['message'] = "Connexion réussi";
-                $_SESSION['role'] = $tuple['role'];
+                $_SESSION['role']    = $tuple['role'];
+                $_SESSION['id']      = $tuple['id'];
 
             } else {
                 $_SESSION['erreur'] = "Identifiants incorrects";
