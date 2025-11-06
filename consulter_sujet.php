@@ -13,7 +13,7 @@ $mysqli = new mysqli($host, $login, $passwd, $dbname);
 
 <div class="row">
 <?php
-// Récupération des sujets (tous les sujets sont visibles dans cette version)
+// Récupération des sujets 
 $query = "SELECT s.id, s.nom as titre, s.resume, s.confidentiel, s.deux_equipes, 
                  u.nom, u.prenom 
           FROM sujets s 

@@ -1,38 +1,39 @@
 <?php
   session_start();
-  if (!($_SESSION['role'])==2):
+  if (!isset($_SESSION['role']) || $_SESSION['role'] != 2):
     header("Location: index.php");
-  else:
+    exit();
+  endif;
 
-  $titre = "Page responsable PING";
+  $titre = "Gestion PING";
   include('header.inc.php');
   include('menu.inc.php');
+  include('message.inc.php');
 ?>
-  <h1>Page responsable PING</h1>
+  <h1 class="my-4">Tableau de bord Responsable PING</h1>
+  <p class="lead">Gérez les inscriptions de tuteurs et les propositions de sujets.</p>
 
-
-
-<?php
-  include('footer.inc.php');
-
-  endif;
-?>
-
-
-
-<div class="row my-4">
-    <div class="col-md-8 mx-auto text-center">
-        <div class="jumbotron bg-light p-5 rounded">
-            <h1 class="display-4">Bienvenue sur la page responsable PING</h1>
-            <p class="lead">Gérer les différents sujets envoyés/p>
-            <hr class="my-4">
-             <?php if (isset $_SESSION['role'] == 2): ?>
-                <a class="btn btn-primary btn-lg me-2" href="inscription.php" role="button">Créer un compte</a> 
-                <a class="btn btn-outline-primary btn-lg" href="connexion.php" role="button">Se connecter</a>
-            <?php endif; ?>
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Activer les comptes</h5>
+                <p class="card-text">Valider les nouveaux comptes tuteurs en attente (rôle 0).</p>
+                <a href="responsable_activer_comptes.php" class="btn btn-primary">Gérer les comptes</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Valider les sujets</h5>
+                <p class="card-text">Consulter, valider ou refuser les sujets proposés par les tuteurs.</p>
+                <a href="responsable_valider_sujets.php" class="btn btn-primary">Valider les sujets</a>
+            </div>
         </div>
     </div>
 </div>
 
-
-// Creer un fichier Consulter sujet et tout les trucs qu'un respo peut faire et mettre les buttons correspondants
+<?php
+  include('footer.inc.php');
+?>
